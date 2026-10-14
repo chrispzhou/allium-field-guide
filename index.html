@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f1df" />
+  <meta name="description" content="A friendly field guide to scallions, daepa, leeks, onions, and their Allium relatives." />
+  <link rel="canonical" href="https://meetthealliums.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meet the Alliums" />
+  <meta property="og:description" content="Scallion, daepa, leek, onion—or something wilder? Meet the family and find your allium personality." />
+  <meta property="og:url" content="https://meetthealliums.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Meet the Alliums" />
+  <meta name="twitter:description" content="A friendly field guide and highly scientific allium personality quiz." />
+  <title>Meet the Alliums</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true">
+    <defs>
+      <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="180%">
+        <feDropShadow dx="0" dy="5" stdDeviation="3" flood-color="#1e362a" flood-opacity=".18"/>
+      </filter>
+
+      <symbol id="scallion" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M75 153C69 105 67 49 76 12" fill="none" stroke="#318355" stroke-width="18" stroke-linecap="round"/>
+          <path d="M89 154C90 99 98 52 111 20" fill="none" stroke="#4c9b65" stroke-width="17" stroke-linecap="round"/>
+          <path d="M101 157C108 111 126 72 145 43" fill="none" stroke="#26754b" stroke-width="16" stroke-linecap="round"/>
+          <path d="M65 154C56 111 43 77 28 51" fill="none" stroke="#5aaa6d" stroke-width="16" stroke-linecap="round"/>
+          <path d="M63 139Q89 126 112 140L111 200Q107 225 89 230Q69 226 64 201Z" fill="#fff8d8" stroke="#183d2d" stroke-width="4"/>
+          <path d="M76 226L68 247M88 228L87 250M99 226L108 246" stroke="#d7b864" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="80" cy="172" r="4" fill="#183d2d"/><circle cx="98" cy="172" r="4" fill="#183d2d"/>
+          <path d="M81 185Q89 192 98 184" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="daepa" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M61 143C52 100 49 54 56 15" fill="none" stroke="#317e4f" stroke-width="24" stroke-linecap="round"/>
+          <path d="M84 145C83 91 90 44 101 10" fill="none" stroke="#438e5b" stroke-width="25" stroke-linecap="round"/>
+          <path d="M107 146C114 96 129 60 145 29" fill="none" stroke="#216b45" stroke-width="23" stroke-linecap="round"/>
+          <path d="M50 132Q87 116 119 135L119 205Q113 232 86 235Q57 230 52 203Z" fill="#fff6cf" stroke="#183d2d" stroke-width="4"/>
+          <path d="M69 231L61 250M83 234L81 253M100 231L110 249" stroke="#d7b864" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="75" cy="174" r="4" fill="#183d2d"/><circle cx="99" cy="174" r="4" fill="#183d2d"/>
+          <path d="M75 188Q87 196 100 187" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+          <path d="M51 177L30 165M118 176L139 160" stroke="#183d2d" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="leek" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)" stroke-linejoin="round">
+          <path d="M67 155Q46 78 34 22Q72 59 84 150" fill="#4a9861" stroke="#183d2d" stroke-width="4"/>
+          <path d="M82 152Q81 70 93 10Q112 73 100 154" fill="#72ad70" stroke="#183d2d" stroke-width="4"/>
+          <path d="M96 154Q118 82 151 39Q136 109 113 169" fill="#2c7950" stroke="#183d2d" stroke-width="4"/>
+          <path d="M52 139Q85 124 121 143L116 210Q108 238 84 239Q57 234 53 208Z" fill="#f7f1c9" stroke="#183d2d" stroke-width="4"/>
+          <path d="M68 234L59 251M83 237L80 255M99 235L108 252" stroke="#d1af54" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="75" cy="175" r="4" fill="#183d2d"/><circle cx="98" cy="175" r="4" fill="#183d2d"/>
+          <path d="M77 190Q86 185 96 190" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="onion" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M89 79C76 52 80 31 91 13C105 39 103 59 93 82" fill="#4e965d" stroke="#183d2d" stroke-width="4"/>
+          <path d="M80 83C61 60 51 42 51 25C76 42 87 59 88 83" fill="#75ad6d" stroke="#183d2d" stroke-width="4"/>
+          <path d="M96 84C112 60 127 49 143 43C130 69 113 82 97 91" fill="#327b4e" stroke="#183d2d" stroke-width="4"/>
+          <path d="M90 77C105 102 143 116 145 164C146 208 121 232 89 233C56 231 34 206 35 165C37 117 74 104 90 77Z" fill="#efb856" stroke="#183d2d" stroke-width="4"/>
+          <path d="M63 111Q87 96 118 111M51 136Q88 119 130 138" fill="none" stroke="#d28d38" stroke-width="4" opacity=".65"/>
+          <path d="M68 228L59 249M85 231L84 252M103 228L113 248" stroke="#b8762d" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="76" cy="168" r="5" fill="#183d2d"/><circle cx="103" cy="168" r="5" fill="#183d2d"/>
+          <path d="M75 185Q89 197 105 184" fill="none" stroke="#183d2d" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="61" cy="184" r="7" fill="#ea8a69" opacity=".6"/><circle cx="117" cy="184" r="7" fill="#ea8a69" opacity=".6"/>
+        </g>
+      </symbol>
+
+      <symbol id="shallot" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M84 87C72 57 76 35 87 18C100 43 100 63 91 89" fill="#4f9459" stroke="#183d2d" stroke-width="4"/>
+          <path d="M77 91C62 71 53 54 52 38C72 51 83 68 85 91" fill="#79ae6d" stroke="#183d2d" stroke-width="4"/>
+          <path d="M88 85C104 65 118 54 130 51C120 73 106 85 92 95" fill="#2f774a" stroke="#183d2d" stroke-width="4"/>
+          <path d="M88 83C102 108 126 119 128 169C129 211 112 232 87 234C61 231 46 208 47 168C49 121 74 108 88 83Z" fill="#bd7e74" stroke="#183d2d" stroke-width="4"/>
+          <path d="M66 225L59 247M86 231L84 252M106 225L115 247" stroke="#9b5b55" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="76" cy="167" r="4" fill="#183d2d"/><circle cx="99" cy="167" r="4" fill="#183d2d"/>
+          <path d="M76 183Q87 191 99 182" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="chives" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <g fill="none" stroke-linecap="round">
+            <path d="M58 213Q43 122 53 36" stroke="#27724a" stroke-width="8"/><path d="M72 214Q64 102 77 19" stroke="#3e8d59" stroke-width="8"/>
+            <path d="M87 215Q91 108 102 42" stroke="#58a366" stroke-width="8"/><path d="M101 217Q117 129 133 62" stroke="#28794b" stroke-width="8"/>
+            <path d="M112 215Q133 158 149 121" stroke="#4a955e" stroke-width="7"/>
+          </g>
+          <path d="M44 196Q86 181 120 199L112 230Q82 242 51 228Z" fill="#f4e8b7" stroke="#183d2d" stroke-width="4"/>
+          <circle cx="72" cy="210" r="3.5" fill="#183d2d"/><circle cx="91" cy="207" r="3.5" fill="#183d2d"/>
+          <path d="M74 220Q82 225 91 218" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="garlic" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M89 86C79 58 82 36 91 17C105 45 101 66 95 87" fill="#4a9158" stroke="#183d2d" stroke-width="4"/>
+          <path d="M83 91C64 70 56 51 58 31C76 45 88 66 89 91" fill="#75aa68" stroke="#183d2d" stroke-width="4"/>
+          <path d="M91 83C111 61 126 52 140 49C128 70 112 84 96 94" fill="#2d7649" stroke="#183d2d" stroke-width="4"/>
+          <path d="M88 82C98 110 131 119 138 163C145 210 120 234 91 235C61 235 37 210 43 165C49 121 78 111 88 82Z" fill="#eee4c7" stroke="#183d2d" stroke-width="4"/>
+          <path d="M89 118V230M67 127Q73 178 68 223M111 127Q106 177 111 224" fill="none" stroke="#c8baa0" stroke-width="3"/>
+          <circle cx="77" cy="170" r="4" fill="#183d2d"/><circle cx="101" cy="170" r="4" fill="#183d2d"/>
+          <path d="M77 185Q89 194 101 184" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="ramp" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M80 174Q40 116 40 42Q82 64 94 166" fill="#438c52" stroke="#183d2d" stroke-width="4"/>
+          <path d="M95 170Q103 81 143 45Q143 119 108 181" fill="#67a764" stroke="#183d2d" stroke-width="4"/>
+          <path d="M68 160Q88 150 111 165L109 210Q101 229 88 230Q71 226 69 209Z" fill="#f0dfc0" stroke="#183d2d" stroke-width="4"/>
+          <path d="M80 226L75 246M93 228L97 248" stroke="#be9258" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="82" cy="183" r="3.5" fill="#183d2d"/><circle cx="98" cy="183" r="3.5" fill="#183d2d"/>
+          <path d="M82 195Q90 201 99 194" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+
+      <symbol id="spring-onion" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M72 151Q58 87 62 28" fill="none" stroke="#4f9a61" stroke-width="18" stroke-linecap="round"/>
+          <path d="M88 148Q87 73 96 16" fill="none" stroke="#2f7d50" stroke-width="19" stroke-linecap="round"/>
+          <path d="M103 153Q117 92 137 47" fill="none" stroke="#65aa6d" stroke-width="17" stroke-linecap="round"/>
+          <path d="M65 141Q88 128 111 144Q126 160 119 190Q114 224 90 232Q64 226 59 190Q54 159 65 141Z" fill="#f1d9c3" stroke="#183d2d" stroke-width="4"/>
+          <path d="M69 155Q89 143 112 157" fill="none" stroke="#d69c9f" stroke-width="4"/>
+          <path d="M75 227L68 248M89 230L88 252M103 227L111 247" stroke="#b98854" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="79" cy="181" r="4" fill="#183d2d"/><circle cx="101" cy="181" r="4" fill="#183d2d"/>
+          <path d="M79 195Q90 203 101 194" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="68" cy="196" r="6" fill="#e9978d" opacity=".6"/><circle cx="112" cy="196" r="6" fill="#e9978d" opacity=".6"/>
+        </g>
+      </symbol>
+
+      <symbol id="garlic-chives" viewBox="0 0 180 260">
+        <g filter="url(#soft-shadow)">
+          <path d="M61 210Q47 124 46 50" fill="none" stroke="#347d4e" stroke-width="9" stroke-linecap="round"/>
+          <path d="M75 211Q67 112 75 28" fill="none" stroke="#4d9560" stroke-width="10" stroke-linecap="round"/>
+          <path d="M91 211Q92 112 99 45" fill="none" stroke="#2d7148" stroke-width="9" stroke-linecap="round"/>
+          <path d="M106 213Q121 132 130 64" fill="none" stroke="#5aa268" stroke-width="10" stroke-linecap="round"/>
+          <path d="M119 213Q139 151 150 105" fill="none" stroke="#397f50" stroke-width="8" stroke-linecap="round"/>
+          <g fill="#fffdf4" stroke="#183d2d" stroke-width="2">
+            <circle cx="46" cy="43" r="8"/><circle cx="36" cy="49" r="8"/><circle cx="54" cy="53" r="8"/><circle cx="43" cy="58" r="8"/><circle cx="46" cy="50" r="7"/>
+          </g>
+          <circle cx="46" cy="50" r="4" fill="#f3bd55"/>
+          <path d="M48 195Q88 180 126 198L116 230Q84 242 55 228Z" fill="#e9dfbd" stroke="#183d2d" stroke-width="4"/>
+          <circle cx="75" cy="210" r="3.5" fill="#183d2d"/><circle cx="96" cy="207" r="3.5" fill="#183d2d"/>
+          <path d="M76 220Q86 225 96 218" fill="none" stroke="#183d2d" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Meet the Alliums home">
+      <span class="brand-mark">A</span>
+      <span>THE ALLIUM FIELD GUIDE</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#family">Family tree</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#compare">Compare</a>
+      <a href="#cousins">Cousins</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> A VERY SERIOUS FAMILY MEETING</div>
+        <h1>Meet the<br><em>Alliums.</em></h1>
+        <p class="hero-deck">Scallion? Green onion? Daepa? Leek? They’re all relatives—but some are siblings, some are cousins, and one name is basically a disguise.</p>
+        <a class="button" href="#answer">Get the 10-second answer <span>↓</span></a>
+      </div>
+      <div class="hero-art reveal" aria-label="Cartoon scallion, onion, leek, and daepa standing together">
+        <div class="sun-stamp">ALL IN THE<br><strong>GENUS <i>ALLIUM</i></strong></div>
+        <svg class="character hero-scallion" role="img"><use href="#scallion"/></svg>
+        <svg id="vincent-onion" class="character hero-onion secret-trigger" role="button" tabindex="0" aria-label="Poke the regular onion for a secret"><title>This onion looks suspiciously clickable</title><use href="#onion"/></svg>
+        <svg class="character hero-leek" role="img"><use href="#leek"/></svg>
+        <svg class="character hero-daepa" role="img"><use href="#daepa"/></svg>
+        <div class="speech-bubble">We get mixed up<br><strong>all the time.</strong></div>
+        <div class="ground-line"></div>
+      </div>
+    </section>
+
+    <div class="easter-egg" id="vincent-egg" hidden>
+      <button class="egg-backdrop" type="button" aria-label="Close secret"></button>
+      <section class="egg-card" role="dialog" aria-modal="true" aria-labelledby="egg-title">
+        <button class="egg-close" type="button" aria-label="Close">×</button>
+        <div class="egg-stamp">SECRET PRODUCE LORE</div>
+        <div class="egg-growth" aria-hidden="true">
+          <svg><use href="#scallion"/></svg>
+          <div><span>GROW</span><b>→</b><span>BULB</span></div>
+          <svg><use href="#onion"/></svg>
+        </div>
+        <h2 id="egg-title">Vincent was right!*</h2>
+        <p>A green onion <strong>can be the exact same plant</strong> as a regular onion—just harvested young, before its bulb grows up.</p>
+        <aside><b>* THE BOTANICAL FINE PRINT</b> This is true when the green onion is a young <em>Allium cepa</em>. Some green onions are bunching onions (<em>A. fistulosum</em>), which stay slim forever. Vincent still gets the point.</aside>
+        <button class="egg-button" type="button">I knew it 🧅</button>
+      </section>
+      <div class="confetti" aria-hidden="true"></div>
+    </div>
+
+    <section class="ticker" aria-label="Allium fun facts">
+      <div class="ticker-track">
+        <span>ONION FAMILY</span><b>✦</b><span>HOLLOW VS. FLAT LEAVES</span><b>✦</b><span>BULB OR NO BULB?</span><b>✦</b><span>ONE VERY CONFUSING PRODUCE AISLE</span><b>✦</b>
+        <span>ONION FAMILY</span><b>✦</b><span>HOLLOW VS. FLAT LEAVES</span><b>✦</b><span>BULB OR NO BULB?</span><b>✦</b><span>ONE VERY CONFUSING PRODUCE AISLE</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="answer section" id="answer">
+      <div class="section-kicker">01 / THE SHORT VERSION</div>
+      <div class="answer-grid">
+        <h2 class="reveal">Same genus.<br><span>Different branches.</span></h2>
+        <div class="answer-copy reveal">
+          <p>They’re all in the genus <em>Allium</em>, along with garlic, shallots, chives, and ramps. What changes is the species, the way they grow, and which bit we like to eat.</p>
+          <p class="marker-note">The biggest naming trap: <strong>“green onion” describes a market form, not one perfectly tidy species.</strong></p>
+        </div>
+      </div>
+      <div class="branch-grid" id="family">
+        <article class="branch-card green reveal">
+          <div class="branch-top"><span>BRANCH A</span><i>Allium fistulosum</i></div>
+          <h3>The bunchers</h3>
+          <p>Scallion / green onion, Welsh onion, Japanese bunching onion, and daepa. They stay slender or thick-shanked rather than making a big round bulb.</p>
+          <div class="mini-lineup">
+            <svg><use href="#scallion"/></svg><span>→</span><svg><use href="#daepa"/></svg>
+          </div>
+        </article>
+        <article class="branch-card gold reveal">
+          <div class="branch-top"><span>BRANCH B</span><i>Allium cepa</i></div>
+          <h3>The bulb makers</h3>
+          <p>Regular onions and shallots. A young bulb onion may also be sold as a “green onion” or “spring onion,” which is where the labels get slippery.</p>
+          <div class="mini-lineup">
+            <svg><use href="#onion"/></svg><span>+</span><svg><use href="#shallot"/></svg>
+          </div>
+        </article>
+        <article class="branch-card blue reveal">
+          <div class="branch-top"><span>BRANCH C</span><i>Allium ampeloprasum</i></div>
+          <h3>The leek branch</h3>
+          <p>Garden leeks have broad, flat leaves arranged like a fan and a thick layered shank. They’re a distinct crop—not just an overgrown scallion.</p>
+          <div class="mini-lineup single">
+            <svg><use href="#leek"/></svg><span>≠ giant scallion</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="lineup section" id="lineup">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker light">02 / THE MAIN LINEUP</div>
+          <h2>Who’s who<br>in the crisper drawer</h2>
+        </div>
+        <p>Use the silhouette first: skinny tube, chunky tube, flat fan, or round bulb.</p>
+      </div>
+
+      <div class="profile-list">
+        <article class="profile-row reveal" id="scallion-profile">
+          <div class="profile-num">01</div>
+          <div class="profile-art green-bg"><svg><use href="#scallion"/></svg><span class="art-note">HOLLOW LEAVES ↑</span></div>
+          <div class="profile-info">
+            <div class="profile-title"><h3>Scallion <i>/</i> green onion</h3><span class="pill">THE SAME THING—USUALLY</span></div>
+            <p>In North American cooking, these names are normally interchangeable. The plant is often <em>A. fistulosum</em>, but it can also be an immature <em>A. cepa</em>.</p>
+            <dl><div><dt>LOOK</dt><dd>Pencil-thin, hollow green tubes, tiny white base</dd></div><div><dt>TASTE</dt><dd>Fresh, bright, lightly oniony</dd></div><div><dt>BEST AT</dt><dd>Garnish, salads, quick cooking</dd></div></dl>
+          </div>
+        </article>
+
+        <article class="profile-row reveal" id="daepa-profile">
+          <div class="profile-num">02</div>
+          <div class="profile-art lime-bg"><svg><use href="#daepa"/></svg><span class="art-note">THICC SCALLION ENERGY</span></div>
+          <div class="profile-info">
+            <div class="profile-title"><h3>Daepa <i>/</i> giant green onion</h3><span class="pill">SCALLION’S BIG SIBLING</span></div>
+            <p>Korean <em>daepa</em> (대파) is a large type of bunching onion, generally <em>A. fistulosum</em>. It has hollow leaves and an extra-long, sturdy white shank.</p>
+            <dl><div><dt>LOOK</dt><dd>Much thicker than a scallion; still tubular</dd></div><div><dt>TASTE</dt><dd>Oniony, sweetens beautifully with heat</dd></div><div><dt>BEST AT</dt><dd>Soups, stocks, grilling, pa-kimchi</dd></div></dl>
+          </div>
+        </article>
+
+        <article class="profile-row reveal" id="leek-profile">
+          <div class="profile-num">03</div>
+          <div class="profile-art blue-bg"><svg><use href="#leek"/></svg><span class="art-note">FLAT LEAF FAN ↑</span></div>
+          <div class="profile-info">
+            <div class="profile-title"><h3>Leek</h3><span class="pill">A DIFFERENT BRANCH</span></div>
+            <p>A leek isn’t a giant green onion. It has broad, flat, overlapping leaves, a layered shank, and usually belongs to <em>A. ampeloprasum</em>.</p>
+            <dl><div><dt>LOOK</dt><dd>Wide, flat leaves in a V-shaped fan</dd></div><div><dt>TASTE</dt><dd>Mild, sweet, earthy; soft when cooked</dd></div><div><dt>BEST AT</dt><dd>Braising, soups, pies, slow cooking</dd></div></dl>
+          </div>
+        </article>
+
+        <article class="profile-row reveal" id="onion-profile">
+          <div class="profile-num">04</div>
+          <div class="profile-art gold-bg"><svg><use href="#onion"/></svg><span class="art-note">ACTUAL BULB ↓</span></div>
+          <div class="profile-info">
+            <div class="profile-title"><h3>Regular onion</h3><span class="pill">THE BULB MAKER</span></div>
+            <p>The familiar yellow, white, or red bulb onion is <em>A. cepa</em>. It stores energy in a round, layered bulb and is usually harvested mature.</p>
+            <dl><div><dt>LOOK</dt><dd>Round papery bulb; greens often trimmed</dd></div><div><dt>TASTE</dt><dd>Sharp raw; deep and sweet cooked</dd></div><div><dt>BEST AT</dt><dd>Nearly everything, honestly</dd></div></dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="spotter section">
+      <div class="section-kicker">03 / SPOT THE DIFFERENCE</div>
+      <div class="spotter-title">
+        <h2>Four clues.<br>One produce aisle.</h2>
+        <div class="legend"><span><b class="dot round"></b> ROUND</span><span><b class="dot hollow"></b> HOLLOW</span><span><b class="dot flat"></b> FLAT</span></div>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th>CLUE</th><th>SCALLION</th><th>DAEPA</th><th>LEEK</th><th>ONION</th></tr></thead>
+          <tbody>
+            <tr><th>Leaf shape</th><td><span class="shape hollow-shape"></span>Hollow tubes</td><td><span class="shape hollow-shape large"></span>Big hollow tubes</td><td><span class="shape flat-shape"></span>Broad + flat</td><td>Hollow, if attached</td></tr>
+            <tr><th>Base</th><td>Slim + white</td><td>Thick, long shank</td><td>Layered white shank</td><td><span class="shape bulb-shape"></span>Round bulb</td></tr>
+            <tr><th>Typical size</th><td class="size-cell"><b class="bar s"></b>Small</td><td class="size-cell"><b class="bar l"></b>Large</td><td class="size-cell"><b class="bar l"></b>Large</td><td class="size-cell"><b class="bar m"></b>Medium</td></tr>
+            <tr><th>Botanical lane</th><td><em>A. fistulosum*</em></td><td><em>A. fistulosum</em></td><td><em>A. ampeloprasum</em></td><td><em>A. cepa</em></td></tr>
+            <tr><th>Quick tell</th><td>Skinny + tubular</td><td>Chunky + tubular</td><td>Chunky + flat fan</td><td>It’s got the globe</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">* “Green onion” and “scallion” are market names, so some are young <em>A. cepa</em> rather than <em>A. fistulosum</em>.</p>
+    </section>
+
+    <section class="compare section" id="compare">
+      <div class="section-heading dark-heading">
+        <div><div class="section-kicker light">04 / HEAD-TO-HEAD</div><h2>Pick your<br>produce fighters</h2></div>
+        <p>Choose any two and get the quickest useful distinction.</p>
+      </div>
+      <div class="compare-controls">
+        <label><span>LEFT CORNER</span><select id="left-select" aria-label="Choose first allium"></select></label>
+        <div class="versus">VS</div>
+        <label><span>RIGHT CORNER</span><select id="right-select" aria-label="Choose second allium"></select></label>
+      </div>
+      <div class="compare-stage" aria-live="polite">
+        <article class="fighter" id="left-fighter"></article>
+        <div class="compare-verdict"><span>THE FASTEST TELL</span><p id="verdict"></p></div>
+        <article class="fighter" id="right-fighter"></article>
+      </div>
+    </section>
+
+    <section class="cousins section" id="cousins">
+      <div class="section-kicker">05 / THE EXTENDED FAMILY</div>
+      <div class="cousins-heading">
+        <h2>Other relatives<br>worth inviting</h2>
+        <p>All are in the genus <em>Allium</em>. They each found their own niche.</p>
+      </div>
+      <div class="cousin-grid">
+        <article class="cousin reveal" id="shallot-profile"><span class="cousin-tag">BULB CLUSTER</span><svg><use href="#shallot"/></svg><h3>Shallot</h3><i>Allium cepa, Aggregatum Group</i><p>Onion’s close cousin—or, taxonomically, part of onion’s own species. Smaller, clustered bulbs with a delicate flavor.</p></article>
+        <article class="cousin reveal" id="chives-profile"><span class="cousin-tag">HERB MODE</span><svg><use href="#chives"/></svg><h3>Chives</h3><i>Allium schoenoprasum</i><p>Fine hollow leaves used like an herb. Snip them; don’t ask them to carry a stew.</p></article>
+        <article class="cousin reveal" id="garlic-profile"><span class="cousin-tag">CLOVE MACHINE</span><svg><use href="#garlic"/></svg><h3>Garlic</h3><i>Allium sativum</i><p>A bulb made of cloves, with a stronger sulfurous punch. Its curly flower stalk is the garlic scape.</p></article>
+        <article class="cousin reveal" id="ramp-profile"><span class="cousin-tag">WILD ONE</span><svg><use href="#ramp"/></svg><h3>Ramp</h3><i>Allium tricoccum</i><p>A North American woodland allium with broad leaves and a bold garlic-onion flavor. Harvest responsibly.</p></article>
+      </div>
+      <div class="name-traps reveal">
+        <h3>Three bonus naming traps</h3>
+        <div id="spring-onion-profile"><b>Spring onion</b><p>Often means a young bulb onion with a small round bulb. In some regions, it’s just another name for scallion.</p></div>
+        <div id="garlic-chives-profile"><b>Garlic chives</b><p><em>Allium tuberosum</em>: flat, grassy leaves and a garlicky taste. Not regular chives, not baby garlic.</p></div>
+        <div><b>Pearl + cipollini onions</b><p>Small shapes and cultivars of bulb onion—not separate branches of the family tree.</p></div>
+      </div>
+    </section>
+
+    <section class="quiz-section section" id="quiz">
+      <div class="quiz-intro reveal">
+        <div class="section-kicker">06 / IMPORTANT SELF-KNOWLEDGE</div>
+        <h2>Which allium<br>are you?</h2>
+        <p>Nine highly scientific questions. Ten possible produce personalities. Your answers quietly change the route.</p>
+      </div>
+
+      <div class="quiz-wrap reveal">
+        <div class="quiz-shell" id="quiz-shell">
+          <div class="quiz-screen quiz-home" id="quiz-home">
+            <p class="pixel-title">Which allium are you?</p>
+            <div class="quiz-home-art" aria-hidden="true">
+              <span class="doodle d1">✦</span><span class="doodle d2">♡</span><span class="doodle d3">⌁</span>
+              <svg><use href="#scallion"/></svg>
+              <svg><use href="#onion"/></svg>
+              <svg><use href="#leek"/></svg>
+              <svg><use href="#garlic"/></svg>
+            </div>
+            <p class="quiz-home-note">A branching personality test from the produce aisle</p>
+            <button class="pixel-button quiz-start" id="quiz-start" type="button">Start →</button>
+          </div>
+
+          <div class="quiz-screen quiz-game" id="quiz-game" hidden>
+            <div class="quiz-progress"><span id="quiz-count">1 / 9</span><div><i id="quiz-progress-bar"></i></div></div>
+            <p class="quiz-route-note" id="quiz-route-note" hidden>↳ BRANCH UNLOCKED: YOUR LAST ANSWER SENT YOU HERE</p>
+            <p class="quiz-question" id="quiz-question"></p>
+            <div class="quiz-scene" id="quiz-scene" aria-hidden="true"></div>
+            <div class="quiz-choices" id="quiz-choices"></div>
+          </div>
+
+          <div class="quiz-screen quiz-result" id="quiz-result" hidden aria-live="polite"></div>
+        </div>
+        <p class="quiz-credit">Inspired by the cozy pixel-world energy of <a href="https://sophie006liu.github.io/vegetal/" target="_blank" rel="noreferrer">Vegetal ↗</a></p>
+      </div>
+    </section>
+
+    <section class="cheat-sheet section">
+      <div class="cheat-inner reveal">
+        <div class="section-kicker">THE ONE-SENTENCE CHEAT SHEET</div>
+        <blockquote>“Scallions are skinny hollow bunching onions; <span>daepa are their giant Korean relatives;</span> leeks are flat-leaved cousins; and regular onions make the big round bulb.”</blockquote>
+        <button id="copy-button" class="button light-button" type="button">Copy for Slack <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="sources section">
+      <div><div class="section-kicker">BOTANICAL RECEIPTS</div><h2>Sources &amp; caveats</h2></div>
+      <div class="source-copy">
+        <p>Common names vary by country, grocer, and seed catalogue. Botanical names are cleaner, but cultivated groups can still be classified in slightly different ways. This guide uses current common horticultural treatment.</p>
+        <ul>
+          <li><a href="https://powo.science.kew.org/" target="_blank" rel="noreferrer">Kew — Plants of the World Online</a> <span>accepted plant names + family placement</span></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4679" target="_blank" rel="noreferrer">NCBI Taxonomy — <em>Allium cepa</em></a> <span>bulb onion taxonomy</span></li>
+          <li><a href="https://www.maangchi.com/ingredient/dae-pa" target="_blank" rel="noreferrer">Maangchi — Daepa</a> <span>Korean culinary use + form</span></li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10742967/" target="_blank" rel="noreferrer">Frontiers in Plant Science</a> <span><em>Allium fistulosum</em> crop history + relationships</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-family" aria-hidden="true"><svg><use href="#scallion"/></svg><svg><use href="#daepa"/></svg><svg><use href="#leek"/></svg><svg><use href="#onion"/></svg></div>
+    <p>Made for people who have stood in a produce aisle holding two long green things.</p>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
